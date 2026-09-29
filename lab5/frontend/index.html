@@ -1,0 +1,914 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shinchan World - Home</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff8df;
+            color: #33220f;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            height: 75px;
+            background: #f04a23;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            color: white;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ffe000;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffe000;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 500px;
+
+            padding: 65px 8%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background:
+                radial-gradient(
+                    circle at 80% 25%,
+                    #ffd86b,
+                    transparent 28%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff3b0,
+                    #fffdf1
+                );
+
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 610px;
+        }
+
+        .hero-content h1 {
+            font-size: 55px;
+            color: #e5381d;
+
+            margin-bottom: 15px;
+
+            text-shadow:
+                3px 3px 0 #ffd800;
+        }
+
+        .hero-content h2 {
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            line-height: 1.7;
+
+            color: #5e4a2e;
+
+            margin-bottom: 30px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+
+            padding: 14px 28px;
+
+            background: #e9381c;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            border: 3px solid #b92913;
+
+            box-shadow: 0 6px 0 #a52412;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(3px);
+        }
+
+        /* SHINCHAN */
+
+        .hero-art {
+            width: 310px;
+            height: 310px;
+
+            border-radius: 45% 55% 50% 50%;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffd928,
+                    #ffb900
+                );
+
+            border: 10px solid #f04a23;
+
+            box-shadow:
+                12px 18px 35px rgba(0,0,0,0.2);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transform: rotate(3deg);
+        }
+
+        .hero-art::before {
+            content: "😜";
+            font-size: 175px;
+        }
+
+        /* SECTION */
+
+        .section {
+            padding: 70px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            color: #e9381c;
+            font-size: 40px;
+
+            text-shadow:
+                2px 2px 0 #ffd900;
+        }
+
+        .section-title p {
+            margin-top: 10px;
+            color: #6d5a38;
+        }
+
+        /* GRID */
+
+        .gadget-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .gadget-card {
+            background: white;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            border: 2px solid #ffe19a;
+
+            box-shadow:
+                0 8px 25px
+                rgba(100,60,0,0.12);
+
+            transition: 0.3s;
+        }
+
+        .gadget-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* PRODUCT AREA */
+
+        .gadget-image {
+            height: 220px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #fff5c9,
+                    #ffe49a
+                );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+        }
+
+        .gadget-image::after {
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+            height: 40px;
+
+            bottom: 25px;
+
+            background: rgba(70,40,0,0.12);
+
+            border-radius: 50%;
+
+            filter: blur(10px);
+        }
+
+        /* WATCH */
+
+        .watch {
+            width: 100px;
+            height: 100px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ff4532,
+                    #a9140a
+                );
+
+            border-radius: 50%;
+
+            border: 8px solid #222;
+
+            box-shadow:
+                8px 12px 20px
+                rgba(0,0,0,0.3);
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .watch::before {
+            content: "";
+
+            position: absolute;
+
+            width: 125px;
+            height: 28px;
+
+            background: #222;
+
+            left: -20px;
+            top: 28px;
+
+            z-index: -1;
+        }
+
+        .watch::after {
+            content: "SHIN";
+
+            position: absolute;
+
+            color: #ffd900;
+
+            font-size: 15px;
+            font-weight: bold;
+
+            top: 34px;
+            left: 22px;
+        }
+
+        /* CAR */
+
+        .toy-car {
+            width: 155px;
+            height: 65px;
+
+            background:
+                linear-gradient(
+                    #ff3c22,
+                    #b7190c
+                );
+
+            border-radius:
+                45px 45px 15px 15px;
+
+            position: relative;
+            z-index: 2;
+
+            box-shadow:
+                8px 12px 18px
+                rgba(0,0,0,0.25);
+        }
+
+        .toy-car::before {
+            content: "";
+
+            position: absolute;
+
+            width: 75px;
+            height: 42px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #bfeeff,
+                    #4ba4d1
+                );
+
+            border-radius:
+                25px 25px 5px 5px;
+
+            top: -30px;
+            left: 40px;
+
+            border: 3px solid #a51d11;
+        }
+
+        .toy-car::after {
+            content: "";
+
+            position: absolute;
+
+            width: 24px;
+            height: 24px;
+
+            background: #222;
+
+            border-radius: 50%;
+
+            left: 22px;
+            bottom: -10px;
+
+            box-shadow: 88px 0 0 #222;
+        }
+
+        /* CAMERA */
+
+        .camera {
+            width: 150px;
+            height: 100px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #555,
+                    #111
+                );
+
+            border-radius: 15px;
+
+            position: relative;
+            z-index: 2;
+
+            box-shadow:
+                10px 14px 20px
+                rgba(0,0,0,0.3);
+        }
+
+        .camera::before {
+            content: "";
+
+            position: absolute;
+
+            width: 65px;
+            height: 65px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle at 35% 30%,
+                    #b8f6ff,
+                    #00658b 55%,
+                    #111 60%
+                );
+
+            border: 6px solid #222;
+
+            top: 17px;
+            left: 42px;
+        }
+
+        /* CAP */
+
+        .cap {
+            width: 150px;
+            height: 80px;
+
+            background:
+                linear-gradient(
+                    #ffd900,
+                    #e8a900
+                );
+
+            border-radius:
+                80px 80px 20px 20px;
+
+            border: 5px solid #d08e00;
+
+            position: relative;
+            z-index: 2;
+
+            box-shadow:
+                8px 14px 20px
+                rgba(0,0,0,0.25);
+        }
+
+        .cap::after {
+            content: "SHINCHAN";
+
+            position: absolute;
+
+            font-size: 13px;
+            font-weight: bold;
+
+            color: #e9381c;
+
+            top: 28px;
+            left: 35px;
+        }
+
+        /* NOTEBOOK */
+
+        .notebook {
+            width: 135px;
+            height: 165px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #f04a23,
+                    #ff7254
+                );
+
+            border-radius: 8px;
+
+            border: 5px solid #a92112;
+
+            position: relative;
+            z-index: 2;
+
+            box-shadow:
+                10px 14px 20px
+                rgba(0,0,0,0.25);
+        }
+
+        .notebook::before {
+            content: "ACTION";
+
+            position: absolute;
+
+            top: 45px;
+            left: 23px;
+
+            color: #ffe000;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            transform: rotate(-8deg);
+        }
+
+        /* SPEAKER */
+
+        .speaker {
+            width: 100px;
+            height: 145px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #292929,
+                    #090909
+                );
+
+            border-radius: 18px;
+
+            position: relative;
+            z-index: 2;
+
+            box-shadow:
+                10px 15px 20px
+                rgba(0,0,0,0.3);
+        }
+
+        .speaker::before {
+            content: "";
+
+            width: 55px;
+            height: 55px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    #f04a23 10%,
+                    #111 12%,
+                    #111 45%,
+                    #777 48%,
+                    #222 55%
+                );
+
+            border-radius: 50%;
+
+            position: absolute;
+
+            left: 22px;
+            top: 30px;
+        }
+
+        /* CARD */
+
+        .card-content {
+            padding: 22px;
+        }
+
+        .card-content h3 {
+            color: #e9381c;
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            color: #6b5b42;
+
+            line-height: 1.5;
+
+            margin-bottom: 18px;
+        }
+
+        .view-btn {
+            display: inline-block;
+
+            text-decoration: none;
+
+            color: #e9381c;
+
+            border: 2px solid #e9381c;
+
+            padding: 8px 18px;
+
+            border-radius: 20px;
+
+            font-weight: bold;
+        }
+
+        .view-btn:hover {
+            background: #e9381c;
+            color: white;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #e9381c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 28px;
+
+            border-top: 8px solid #ffd900;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 900px) {
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-art {
+                margin-top: 40px;
+            }
+
+            .gadget-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .hero-art {
+                width: 240px;
+                height: 240px;
+            }
+
+            .hero-art::before {
+                font-size: 125px;
+            }
+
+            .gadget-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            🔴 Shinchan <span>World</span>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+
+            <li>
+                <a href="enquiry.html">Enquiry</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Welcome to Shinchan World!
+            </h1>
+
+            <h2>
+                😜 Fun, Mischief & Imagination
+            </h2>
+
+            <p>
+                Step into the colorful world of Shinchan and
+                explore a collection of fun, playful and
+                futuristic gadgets inspired by his crazy
+                adventures.
+            </p>
+
+            <a href="#gadgets" class="hero-btn">
+                Explore Gadgets →
+            </a>
+
+        </div>
+
+
+        <div class="hero-art"></div>
+
+    </section>
+
+
+    <!-- GADGETS -->
+
+    <section class="section" id="gadgets">
+
+        <div class="section-title">
+
+            <h2>
+                🔥 Featured Gadgets
+            </h2>
+
+            <p>
+                Cool gadgets for every Shinchan-style adventure!
+            </p>
+
+        </div>
+
+
+        <div class="gadget-grid">
+
+
+            <div class="gadget-card">
+
+                <div class="gadget-image">
+                    <div class="watch"></div>
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Action Watch</h3>
+
+                    <p>
+                        A stylish adventure watch designed
+                        for Shinchan's legendary missions
+                        and adventures.
+                    </p>
+
+                    <a href="#" class="view-btn">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="gadget-card">
+
+                <div class="gadget-image">
+                    <div class="toy-car"></div>
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Action Toy Car</h3>
+
+                    <p>
+                        A miniature high-speed vehicle
+                        perfect for exciting indoor and
+                        outdoor adventures.
+                    </p>
+
+                    <a href="#" class="view-btn">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="gadget-card">
+
+                <div class="gadget-image">
+                    <div class="camera"></div>
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Action Camera</h3>
+
+                    <p>
+                        Capture every funny moment,
+                        adventure and mischievous memory.
+                    </p>
+
+                    <a href="#" class="view-btn">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="gadget-card">
+
+                <div class="gadget-image">
+                    <div class="cap"></div>
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Shinchan Action Cap</h3>
+
+                    <p>
+                        A playful signature cap inspired
+                        by Shinchan's energetic personality.
+                    </p>
+
+                    <a href="#" class="view-btn">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="gadget-card">
+
+                <div class="gadget-image">
+                    <div class="notebook"></div>
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Action Notebook</h3>
+
+                    <p>
+                        Keep your secret plans, drawings
+                        and crazy ideas in one place.
+                    </p>
+
+                    <a href="#" class="view-btn">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="gadget-card">
+
+                <div class="gadget-image">
+                    <div class="speaker"></div>
+                </div>
+
+                <div class="card-content">
+
+                    <h3>Action Music Speaker</h3>
+
+                    <p>
+                        A compact speaker designed to bring
+                        music and fun to every adventure.
+                    </p>
+
+                    <a href="#" class="view-btn">
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            ❤️ Shinchan World |
+            Fun Beyond Imagination 😜
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```

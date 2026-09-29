@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Doraemon Gadgets</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #eef9ff;
+            color: #123;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            height: 75px;
+            background: #0795df;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            color: white;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ffd900;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffe000;
+        }
+
+        /* HEADER */
+
+        .about-hero {
+            text-align: center;
+
+            padding: 80px 20px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 20%,
+                    #bcecff,
+                    transparent 40%
+                ),
+                linear-gradient(
+                    135deg,
+                    #d9f5ff,
+                    white
+                );
+        }
+
+        .about-hero h1 {
+            font-size: 50px;
+            color: #087ecb;
+            margin-bottom: 15px;
+        }
+
+        .about-hero p {
+            max-width: 700px;
+            margin: auto;
+
+            font-size: 18px;
+            line-height: 1.7;
+
+            color: #555;
+        }
+
+        /* ABOUT CARDS */
+
+        .about-container {
+            width: 85%;
+
+            margin: 50px auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+        }
+
+        .about-card {
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            border: 1px solid #d6effc;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .about-card h2 {
+            color: #087ecb;
+            margin-bottom: 15px;
+        }
+
+        .about-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* FEATURES */
+
+        .features {
+            width: 85%;
+
+            margin: 40px auto 70px;
+        }
+
+        .features h2 {
+            text-align: center;
+
+            color: #087ecb;
+
+            margin-bottom: 30px;
+
+            font-size: 35px;
+        }
+
+        .feature-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .feature {
+            background: white;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 20px;
+
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .feature .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            color: #087ecb;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #057fc1;
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+
+                height: auto;
+
+                padding: 20px;
+
+                gap: 15px;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            🔵 Doraemon <span>Gadgets</span>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="/">Home</a>
+            </li>
+
+            <li>
+                <a href="/about">About Us</a>
+            </li>
+
+            <li>
+                <a href="/enquiry">Enquiry</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- HEADER -->
+
+    <section class="about-hero">
+
+        <h1>About Us 💙</h1>
+
+        <p>
+            Welcome to Doraemon Gadget World — a futuristic space
+            where imagination meets technology. Explore amazing
+            gadgets inspired by the wonderful world of Doraemon.
+        </p>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about-container">
+
+
+        <div class="about-card">
+
+            <h2>🚀 Who We Are</h2>
+
+            <p>
+                Doraemon Gadget World is a fictional gadget experience
+                designed for fans who love futuristic inventions,
+                creativity and technology.
+
+                Our website brings together some of the most famous
+                gadgets and presents them through a modern digital
+                experience.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <h2>🎯 Our Mission</h2>
+
+            <p>
+                Our mission is to create a fun and interactive platform
+                where visitors can discover imaginative gadgets,
+                understand their fictional abilities and experience
+                a futuristic interface inspired by Doraemon's world.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <h2>💡 Our Vision</h2>
+
+            <p>
+                We imagine a future where technology can solve
+                everyday problems in creative ways. From instant
+                transportation to time travel, our gadget collection
+                represents the limitless possibilities of imagination.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <h2>🌟 Why Doraemon?</h2>
+
+            <p>
+                Doraemon has introduced generations of viewers to
+                fascinating ideas about science, technology and
+                imagination. His gadgets inspire curiosity and make
+                futuristic ideas feel fun and exciting.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+        <h2>Why Explore Our Gadgets?</h2>
+
+        <div class="feature-grid">
+
+
+            <div class="feature">
+
+                <div class="icon">🔬</div>
+
+                <h3>Futuristic</h3>
+
+                <p>
+                    Discover gadgets based on imaginative
+                    futuristic technology.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="icon">🎨</div>
+
+                <h3>Interactive</h3>
+
+                <p>
+                    Enjoy a colorful and engaging gadget
+                    browsing experience.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="icon">🌌</div>
+
+                <h3>Imaginative</h3>
+
+                <p>
+                    Explore inventions that turn impossible
+                    ideas into exciting possibilities.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            💙 Doraemon Gadget World | Explore Beyond Imagination 🚀
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+
