@@ -8,7 +8,7 @@ const b1 = {
 
 const b2 = {
   picUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTOMBjiQfAVzEl5p71ntHcMVc7XC8Lwg_Ht7mhL5BlNQ&s=10",
-  bname:"Dpraemon Design Pattern",
+  bname:"Doraemon Design Pattern",
   price:2299,
   quantity:12,
   rating:4.3,
