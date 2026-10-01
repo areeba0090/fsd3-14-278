@@ -23,3 +23,28 @@
 2. It must starts with capital letter.
 3. It should be treated as HTML tag.
 4. It must be closed.
+
+## Object Destructure
+1. const{bname,price,quantity,rating,picUrl}=props.book;
+a. It doesn't depends on order, if property is not available then it initialize with null.
+2. const{price,picUrl}=props.book;   (to get the selected property)
+3. const{price,...rest}=props.book;  (to leave the selected property and get the rest of it)
+return rest;
+b. Any components include styles
+i. External CSS: Create class in index.css and use in component.
+ii. Internal CSS: Create property as object 
+'''
+const qtystyle = {
+    fontSize:"irem",
+    color:"blue",
+    texAlign:"center",
+    backgroundColor:"Yellow",
+    padding:"10px",
+  }
+'''
+then apply with style at preview and pass the object
+' <h3 style={qtystyle}>Quantity: {quantity}</h3> '
+iii. Inlice CSS: In this method we use two curly bracket with style attribute. All the CSS property must be single word. For Example: text-align becomes textAlign (Camel Case)
+
+rafce->Arrow Function
+rfce->function

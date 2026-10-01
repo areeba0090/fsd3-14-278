@@ -1,3 +1,5 @@
+import Book from "./components/Book";
+import Pen from "./components/Pen";
 const b1 = {
   picUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvsNCwA4pajVZbpl1AalVB0ZhNntMX4sXqfAaWR90R0A&s=10",
   bname:"Crayon Shinchan",
@@ -14,20 +16,21 @@ const b2 = {
   rating:4.3,
 };
 
-function Book(props) {
-  // console.log(props);
-  const{bname,price,quantity,rating,picUrl}=props.book;
-  return (
-    <div>
-    <img src={picUrl} alt={bname}/>
-    <h1>{bname}</h1>
-    <h2>Price: {price}</h2>
-    <h3>Quantity: {quantity}</h3>
-    <h4>Rating: {rating}</h4>
-    <button>Buy Now</button>
-    </div>
-  );
-}
+const p1 = {
+  picUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjkEyuCVyeNVOWHWVIBr5G_p3uhexa2uDGm9GVxp-lHQ&s=10",
+  pname: "Blue Ball Pen",
+  price: 20,
+  quantity: 50,
+  rating: 4.5,
+};
+
+const p2 = {
+  picUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzmEg9eG7WzrD5lPJVM2XUunXTgLip-F9nlnUiLFm4Bg&s",
+  pname: "Black Gel Pen",
+  price: 30,
+  quantity: 40,
+  rating: 4.8,
+};
 
 export default function App() {
   return (
@@ -39,6 +42,14 @@ export default function App() {
   <Book book={b1}/>
   <Book book={b2}/>
   </div>
+
+  <h1>Online Pen Store</h1>
+      <div className="container">
+        <Pen pen={p1} />
+        <Pen pen={p2} />
+        <Pen pen={p1} />
+        <Pen pen={p2} />
+      </div>
   </>
   );
 }
