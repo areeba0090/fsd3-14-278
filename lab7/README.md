@@ -50,3 +50,5 @@ rafce->Arrow Function
 rfce->function
 
 app.jsx should be minimum code 
+
+By default button in HTML is submit button.
