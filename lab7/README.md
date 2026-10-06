@@ -48,3 +48,5 @@ iii. Inlice CSS: In this method we use two curly bracket with style attribute. A
 
 rafce->Arrow Function
 rfce->function
+
+app.jsx should be minimum code 
